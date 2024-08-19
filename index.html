@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="styles.css" rel="stylesheet" />
+</head>
+<body>
+  <!-- Accessibility Controls -->
+  <div id="accessibility-controls" class="d-flex justify-content-center">
+    <button id="increase-font" class="btn btn-primary mx-2">A+</button>
+    <button id="decrease-font" class="btn btn-primary mx-2">A-</button>
+    <button id="toggle-theme" class="btn btn-primary mx-2">Toggle Theme</button>
+  </div>
+  <!-- Main content -->
+  <main class="container my-4">
+    <section id="weather-wrapper" class="text-center">
+      <h1 class="mb-4">Weather App</h1>
+      <div id="weather-search" class="d-flex flex-column flex-md-row justify-content-center align-items-center">
+        <label id="search-label" for="search" class="sr-only">Search by city</label>
+        <input id="search" type="text" class="form-control mr-md-2 mb-2 mb-md-0" placeholder="Search by city" aria-labelledby="search-label">
+
+        <button id="submit" class="btn btn-primary">Search</button>
+      </div>
+      <div id="weather-data" class="mt-3" style="display: none;">
+        <div id="current-weather"></div>
+        <button id="more-info-btn" class="btn btn-primary mt-3" style="display: none;">More Info</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Default city cards -->
+<div id="default-cities" class="container my-4">
+  <div class="row">
+    <div class="col-md-4 city-card" data-city="Chicago">
+      <img src="images/chicago.jpeg" alt="Skyline of Chicago on a sunny day" class="img-fluid">
+      <h2>Chicago</h2>
+      <p class="temperature">Temperature: --°C</p>
+      <p class="description">Description: --</p>
+      <a href="detailed-weather.html?city=Chicago" class="btn btn-primary">View Weather</a>
+    </div>
+    <div class="col-md-4 city-card" data-city="New York">
+      <img src="images/New york.jpeg" alt="Aerial view of New York City with iconic skyscrapers" class="img-fluid">
+      <h2>New York</h2>
+      <p class="temperature">Temperature: --°C</p>
+      <p class="description">Description: --</p>
+      <a href="detailed-weather.html?city=New%20York" class="btn btn-primary">View Weather</a>
+    </div>
+    <div class="col-md-4 city-card" data-city="Dubai">
+      <img src="images/dubai.jpeg" alt="Dubai cityscape featuring the Burj Khalifa and modern architecture" class="img-fluid">
+      <h2>Dubai</h2>
+      <p class="temperature">Temperature: --°C</p>
+      <p class="description">Description: --</p>
+      <a href="detailed-weather.html?city=Dubai" class="btn btn-primary">View Weather</a>
+    </div>
+  </div>
+</div>
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="javascript/script1.js"></script>
+  <script src="javascript/city_cards.js"></script>
+</body>
+</html>
